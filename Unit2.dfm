@@ -135,6 +135,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'Hitung'
     TabOrder = 11
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 176
@@ -143,6 +144,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'Hapus'
     TabOrder = 12
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 368
@@ -151,5 +153,6 @@ object Form2: TForm2
     Height = 25
     Caption = 'Keluar'
     TabOrder = 13
+    OnClick = Button3Click
   end
 end
