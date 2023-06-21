@@ -1,0 +1,54 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Nil1: TEdit;
+    Nil2: TEdit;
+    Ehtambah: TEdit;
+    ehkali: TEdit;
+    Ehbagi: TEdit;
+    ehkurang: TEdit;
+    Btambah: TButton;
+    Bkali: TButton;
+    Bbagi: TButton;
+    Bkurang: TButton;
+    Bclose: TButton;
+    procedure BtambahClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.BtambahClick(Sender: TObject);
+var
+  Nil1, Nil2 : real;
+  tambah: real;
+begin
+  Nil1 := strtofloat(Nil1.text);
+  Nil2 := strtofloat(Nil2.text);
+  tambah := Nil1 + Nil2;
+  Ehtambah.text := floattostr(tambah);
+end;
+
+end.
