@@ -4,11 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls;
+  Dialogs, StdCtrls, Menus;
 
 type
   TForm1 = class(TForm)
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -26,11 +25,15 @@ type
     Bbagi: TButton;
     Bkurang: TButton;
     Bclose: TButton;
+    MainMenu1: TMainMenu;
+    UTS1: TMenuItem;
+    Kondisional1: TMenuItem;
     procedure BtambahClick(Sender: TObject);
     procedure BkaliClick(Sender: TObject);
     procedure BbagiClick(Sender: TObject);
     procedure BkurangClick(Sender: TObject);
     procedure BcloseClick(Sender: TObject);
+    procedure Kondisional1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,6 +44,8 @@ var
   Form1: TForm1;
 
 implementation
+
+uses Unit2;
 
 {$R *.dfm}
 
@@ -68,6 +73,11 @@ end;
 procedure TForm1.BcloseClick(Sender: TObject);
 begin
 close;
+end;
+
+procedure TForm1.Kondisional1Click(Sender: TObject);
+begin
+Form2.show;
 end;
 
 end.
