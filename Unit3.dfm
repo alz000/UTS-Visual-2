@@ -2,7 +2,7 @@ object Form3: TForm3
   Left = 349
   Top = 213
   Width = 985
-  Height = 675
+  Height = 483
   Caption = 'Grafik dan Stringgrid'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -35,7 +35,6 @@ object Form3: TForm3
     Height = 21
     ItemHeight = 13
     TabOrder = 0
-    Text = 'combobox1'
   end
   object Edit1: TEdit
     Left = 184
