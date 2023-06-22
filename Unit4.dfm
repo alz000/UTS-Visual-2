@@ -98,7 +98,6 @@ object Form4: TForm4
     Width = 145
     Height = 21
     TabOrder = 4
-    Text = 'edt1'
   end
   object cbb1: TComboBox
     Left = 256
@@ -107,7 +106,14 @@ object Form4: TForm4
     Height = 21
     ItemHeight = 13
     TabOrder = 5
-    Text = 'cbb1'
+    Items.Strings = (
+      '2017'
+      '2018'
+      '2019'
+      '2020'
+      '2021'
+      '2022'
+      '2023')
   end
   object cbb2: TComboBox
     Left = 256
@@ -116,6 +122,16 @@ object Form4: TForm4
     Height = 21
     ItemHeight = 13
     TabOrder = 6
-    Text = 'cbb2'
+    Items.Strings = (
+      'FKIP'
+      'FISIP'
+      'FKM'
+      'FAPERTA'
+      'FATEK'
+      'FTI'
+      'FEKON'
+      'HUKUM'
+      'FSI'
+      'ILMU FARMASI')
   end
 end
