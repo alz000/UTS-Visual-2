@@ -20,9 +20,14 @@ type
     edt1: TEdit;
     cbb1: TComboBox;
     cbb2: TComboBox;
+    Button2: TButton;
+    Button3: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure charadd;
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -68,4 +73,34 @@ begin
     Chart1.Series[0].Add(StrToFloat(StringGrid1.Cells[1,i]),StringGrid1.Cells[2,i]);
   end;
   end;
+
+
+procedure TForm4.charadd;
+var i:Integer;
+begin
+  Chart1.Series[0].Clear; //membersihkan tampilan char
+for i:=1 to StringGrid1.rowcount-1 do
+begin
+  Chart1.Series[0].Add(StrToFloat(StringGrid1.Cells[1,i]),StringGrid1.Cells[2,i]);
+end;
+end;
+
+procedure TForm4.Button2Click(Sender: TObject);
+var i:Integer;
+begin
+  Chart1.Series[0].Clear; //membersihkan tampilan char
+for i:=1 to StringGrid1.rowcount-1 do
+begin
+  Chart1.Series[0].Add(StrToFloat(StringGrid1.Cells[1,i]),StringGrid1.Cells[2,i]);
+end;
+end;
+
+
+procedure TForm4.Button3Click(Sender: TObject);
+begin
+StringGrid1.RowCount:= StringGrid1.RowCount-
+MAX_PATH; //hapus isi data stringgrid all
+charadd; //procedure
+end;
+
 end.

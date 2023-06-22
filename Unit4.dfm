@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 670
-  Top = 257
+  Left = 499
+  Top = 166
   Width = 983
   Height = 675
   Caption = 'Grafik dan Stringgrid 2'
@@ -52,7 +52,7 @@ object Form4: TForm4
     OnClick = Button1Click
   end
   object BitBtn1: TBitBtn
-    Left = 280
+    Left = 560
     Top = 184
     Width = 75
     Height = 25
@@ -133,5 +133,23 @@ object Form4: TForm4
       'HUKUM'
       'FSI'
       'ILMU FARMASI')
+  end
+  object Button2: TButton
+    Left = 224
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = 'CLEAR'
+    TabOrder = 7
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 320
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = 'CLEAR ALL'
+    TabOrder = 8
+    OnClick = Button3Click
   end
 end
