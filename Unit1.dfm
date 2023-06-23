@@ -160,6 +160,10 @@ object Form1: TForm1
         Caption = 'Grafik dan Stringgrid 2'
         OnClick = GrafikdanStringgrid21Click
       end
+      object DatabaseGrafikChart1: TMenuItem
+        Caption = 'Database Grafik Chart'
+        OnClick = DatabaseGrafikChart1Click
+      end
     end
   end
 end

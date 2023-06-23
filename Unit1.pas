@@ -30,6 +30,7 @@ type
     Kondisional1: TMenuItem;
     GrafikdanStringgrid1: TMenuItem;
     GrafikdanStringgrid21: TMenuItem;
+    DatabaseGrafikChart1: TMenuItem;
     procedure BtambahClick(Sender: TObject);
     procedure BkaliClick(Sender: TObject);
     procedure BbagiClick(Sender: TObject);
@@ -38,6 +39,7 @@ type
     procedure Kondisional1Click(Sender: TObject);
     procedure GrafikdanStringgrid1Click(Sender: TObject);
     procedure GrafikdanStringgrid21Click(Sender: TObject);
+    procedure DatabaseGrafikChart1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +51,7 @@ var
 
 implementation
 
-uses Unit2, Unit3, Unit4;
+uses Unit2, Unit3, Unit4, Unit5;
 
 {$R *.dfm}
 
@@ -92,6 +94,11 @@ end;
 procedure TForm1.GrafikdanStringgrid21Click(Sender: TObject);
 begin
   form4.show;
+end;
+
+procedure TForm1.DatabaseGrafikChart1Click(Sender: TObject);
+begin
+  form5.show
 end;
 
 end.

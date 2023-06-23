@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 499
-  Top = 166
+  Left = 944
+  Top = 225
   Width = 983
   Height = 675
   Caption = 'Grafik dan Stringgrid 2'
