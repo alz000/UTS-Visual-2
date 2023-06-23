@@ -31,6 +31,7 @@ type
     GrafikdanStringgrid1: TMenuItem;
     GrafikdanStringgrid21: TMenuItem;
     DatabaseGrafikChart1: TMenuItem;
+    btn1: TButton;
     procedure BtambahClick(Sender: TObject);
     procedure BkaliClick(Sender: TObject);
     procedure BbagiClick(Sender: TObject);
@@ -40,6 +41,7 @@ type
     procedure GrafikdanStringgrid1Click(Sender: TObject);
     procedure GrafikdanStringgrid21Click(Sender: TObject);
     procedure DatabaseGrafikChart1Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,6 +101,14 @@ end;
 procedure TForm1.DatabaseGrafikChart1Click(Sender: TObject);
 begin
   form5.show
+end;
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+  Ehtambah.Text:=inttostr(strtoint(Nil1.Text)+strtoint(Nil2.Text));
+  ehkali.Text:=inttostr(strtoint(Nil1.Text)*strtoint(Nil2.Text));
+  Ehbagi.Text:=floattostr(strtoint(Nil1.Text)/strtoint(Nil2.Text));
+  ehkurang.Text:=inttostr(strtoint(Nil1.Text)-strtoint(Nil2.Text));
 end;
 
 end.

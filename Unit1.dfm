@@ -79,21 +79,21 @@ object Form1: TForm1
   end
   object ehkali: TEdit
     Left = 128
-    Top = 144
+    Top = 184
     Width = 97
     Height = 21
     TabOrder = 3
   end
   object Ehbagi: TEdit
     Left = 128
-    Top = 184
+    Top = 224
     Width = 97
     Height = 21
     TabOrder = 4
   end
   object ehkurang: TEdit
     Left = 128
-    Top = 224
+    Top = 144
     Width = 97
     Height = 21
     TabOrder = 5
@@ -142,6 +142,15 @@ object Form1: TForm1
     Caption = 'Close'
     TabOrder = 10
     OnClick = BcloseClick
+  end
+  object btn1: TButton
+    Left = 280
+    Top = 32
+    Width = 97
+    Height = 41
+    Caption = 'Proses Semua'
+    TabOrder = 11
+    OnClick = btn1Click
   end
   object MainMenu1: TMainMenu
     Left = 8
