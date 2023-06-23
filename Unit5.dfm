@@ -3,7 +3,7 @@ object Form5: TForm5
   Top = 203
   Width = 875
   Height = 673
-  Caption = 'Form5'
+  Caption = 'Informasi Jadwal Praktikum Reguler'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object dbgrd1: TDBGrid
@@ -27,23 +28,23 @@ object Form5: TForm5
     TitleFont.Style = []
   end
   object btn1: TButton
-    Left = 608
+    Left = 648
     Top = 24
-    Width = 185
+    Width = 145
     Height = 49
     Caption = 'Tampilkan Data Grafik'
     TabOrder = 1
     OnClick = btn1Click
   end
   object cht1: TChart
-    Left = 256
+    Left = 216
     Top = 328
     Width = 400
     Height = 250
     BackWall.Brush.Color = clWhite
     BackWall.Brush.Style = bsClear
     Title.Text.Strings = (
-      'TChart')
+      '')
     TabOrder = 2
     object Series1: TBarSeries
       Marks.ArrowLength = 20
@@ -58,6 +59,31 @@ object Form5: TForm5
       YValues.Multiplier = 1.000000000000000000
       YValues.Order = loNone
     end
+  end
+  object btn2: TButton
+    Left = 544
+    Top = 24
+    Width = 99
+    Height = 49
+    Caption = 'Print'
+    TabOrder = 3
+  end
+  object btn3: TButton
+    Left = 456
+    Top = 24
+    Width = 75
+    Height = 49
+    Caption = 'Load Data'
+    TabOrder = 4
+    OnClick = btn3Click
+  end
+  object btn4: TButton
+    Left = 336
+    Top = 24
+    Width = 105
+    Height = 49
+    Caption = 'Tambah Data Baru'
+    TabOrder = 5
   end
   object con1: TADOConnection
     Connected = True
