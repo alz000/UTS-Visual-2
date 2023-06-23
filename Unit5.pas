@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ADODB, Grids, DBGrids, StdCtrls, TeEngine, Series, ExtCtrls,
-  TeeProcs, Chart;
+  TeeProcs, Chart, frxClass, frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -19,9 +19,17 @@ type
     btn2: TButton;
     btn3: TButton;
     btn4: TButton;
+    frxDBjadwal: TfrxDBDataset;
+    frxjadwal: TfrxReport;
+    frxDBdetailjadwal: TfrxDBDataset;
+    frxdetailjadwal: TfrxReport;
+    qry2: TADOQuery;
     procedure btn1Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure frxjadwalClickObject(View: TfrxView; Button: TMouseButton;
+      Shift: TShiftState; var Modified: Boolean);
   private
     { Private declarations }
   public
@@ -72,6 +80,24 @@ dbgrd1.Columns[3].Width:=90;
 dbgrd1.Columns[5].Width:=50;
 dbgrd1.Columns[6].Width:=110;
 dbgrd1.Columns[7].Width:=90;
+end;
+
+procedure TForm5.btn2Click(Sender: TObject);
+begin
+frxjadwal.ShowReport();
+end;
+
+procedure TForm5.frxjadwalClickObject(View: TfrxView;
+  Button: TMouseButton; Shift: TShiftState; var Modified: Boolean);
+begin
+  if View.Name ='Memo7' then
+  begin
+    qry2.SQL.Clear;
+    qry2.SQL.Add('select *from jadwal_table where kelas="'+view.TagStr+'"');
+    qry2.Open;
+
+    frxdetailjadwal.ShowReport();
+  end;
 end;
 
 end.
